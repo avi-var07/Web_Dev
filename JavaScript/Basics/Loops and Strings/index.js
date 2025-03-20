@@ -26,3 +26,19 @@ const student={
 };
 for(let i in student) console.log(i); //prints keys
 for(let i in student) console.log("key is",i," and value is: ",student[i]); //prints keys and values
+
+//Strings
+
+let str1 = "Hii";
+console.log(str1);
+console.log(str1.length);
+//template literal in strings
+let str2 = `Hii hello`;
+console.log(typeof str2);   //string
+
+const item = {
+    name : "Gel",
+    cost:50,
+};
+let  out = `name of pen is ${item.name} and cost is ${item.cost}`;
+console.log(out);
