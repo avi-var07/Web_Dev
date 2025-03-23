@@ -32,3 +32,44 @@ companies.splice(1,1,"Ola");//instead of uber, add ola
 console.log(companies);
 companies.push("Amazon");//add amazon at end
 console.log(companies);
+
+
+console.log(numbers.includes(9));   //true;
+
+console.log(numbers.indexOf(9));    //6
+
+const newArr = numbers.join();  //this is now converted to string
+
+console.log(numbers);       //[1,2,3,10,11,8,9]
+console.log(typeof numbers);    //object
+console.log(newArr);    //1,2,3,10,11,8,9
+console.log(typeof newArr); //string
+
+
+//difference between slice and splice: Slice does not modifies the original array whereas splice modifies the original array, slice returns a new array with the extracted elements whereas splice returns the removed  elements(if any) as an array
+//syntax of splice: array.splice(start, deleteCount, item1, item2, ...)
+
+
+//spread operator
+
+let marvel = ['ironman','doctor strange', 'hulk'];
+let dc = ['superman','batman','flash'];
+
+const all_hero = [...marvel, ...dc];
+
+console.log(all_hero);  //[ 'ironman', 'doctor strange', 'hulk', 'superman', 'batman', 'flash' ]
+
+let name  = "Aviral";
+console.log(Array.isArray(name));   //false
+
+
+console.log(Array.from(name));  //[ 'A', 'v', 'i', 'r', 'a', 'l' ]
+
+//interesting thing for interview below:
+
+console.log(Array.from({name: "aviral"}))   // will returnb an empty array, i.e : [] because it doesn't know about it
+
+let one = 100;
+let two = 200;
+let three = 300;
+console.log(Array.of(one,two,three));   //[ 100, 200, 300 ]
