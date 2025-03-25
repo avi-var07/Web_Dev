@@ -120,3 +120,46 @@ let product = user_array.reduce((res,val)=>{
     return res*val;
 });
 console.log("product up to n is: "+product);
+
+//Shopping cart : user continuously adds items and we don't know how many:
+
+//we use rest operator to handle such situations: (rest is same as spread operator but it is used in function arguments) ye ek array mei daaldega saare values
+function calculatePrice(val1,val2,...num1){ //ek value aayegi val1, ek value aayegi val2, baaki saari values num1 mei daaldega
+    console.log(val1,val2,num1);
+    let sum = 0;
+    for(const val of num1){
+        sum+=val;
+    }
+    return sum;
+
+}
+
+console.log(calculatePrice(1,2,3,4,5,6,7,8,9,10));
+
+
+const user = {
+    username: 'aviral',
+    price : 10000
+}
+
+function handleObject(anyobject){
+    console.log(`username is: ${anyobject.username} and price is: ${anyobject.price}`);
+}
+
+handleObject(user);
+handleObject({
+
+    username: 'ved',
+    price: 20000
+})
+
+//for arrays:
+
+
+const array = [ 1,2,3,4,5,6,7,8,9,10];
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+
+console.log(returnSecondValue(array));
+console.log(returnSecondValue([200,400,600,800,1000]));
