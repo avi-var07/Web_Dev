@@ -31,3 +31,27 @@ console.log(typeof student);   //object
 console.log(student.Name);   //Aviral Varshney
 student.Age+=1;
 console.log(student["Age"]);   //20
+
+
+
+//meaning of block scoped and globally scoped
+
+if(true){
+    let z = 10;
+    var w = 4000;
+}
+console.log(w);   //4000
+//console.log(z);   //error
+
+//var bahar aajayega but let nhi aayega, var globally scoped hai, let block scoped hai
+
+
+var c=300;
+if(true){
+    c=400;
+}
+console.log(c);   //400
+//bc aana to 300 chahiye, lekin iski maa ka, 400 aaya, ab bc pehle wala c hi nhi hai, to 400 aayega, smjhe?
+
+
+
