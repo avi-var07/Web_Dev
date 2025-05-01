@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Ki Class</title>
+    <script src = "https://cdn.tailwindcss.com" ></script>
+</head>
+<body class="bg-gray-700 text-white">
+    <div class="week">
+        <div class="dayOne">Sunday</div>
+        <div class="dayTwo">Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+    </div>
+</body>
+<script>
+   const parent =  document.querySelector('.week');
+   console.log(parent); //div class="week" aur usk andr ka sb aayeag
+   console.log(parent.children);//HTML Collection of all children divs
+   console.log(parent.children[0]); //first child div, Sunday wala div aayega poora
+    console.log(parent.children[0].innerText); //Sunday
+
+
+    for(let i =0; i<parent.children.length;i++)console.log(parent.children[i].innerText);   //saare div k andr likhe hue text aayenge
+
+
+    parent.children[1].style.color = "red"; //Monday ka color red ho gaya
+
+
+    console.log(parent.firstElementChild); //poora sunday div aayega
+    console.log(parent.lastElementChild); //poora Saturday div aayega
+
+    const day  = document.querySelector('.dayTwo');
+
+    console.log(day.parentElement); //dayTwo ka parent yaani week print hoga
+
+    console.log(day.previousElementSibling); //dayTwo ka previous sibling yaani Sunday print hoga
+    console.log(day.nextElementSibling); //dayTwo ka next sibling yaani Tuesday print hoga
+
+
+    console.log("NODES: ", parent.childNodes); //yeh NodeList return krega, jisme text nodes bhi honge, jaise line breaks ya spaces sb include honge
+
+    const div = document.createElement('div'); //new div create kiya
+    console.log(div); //yeh empty div hoga, abhi kuch nahi hai isme
+    div.className = "Hello";
+    div.id = "Hii";
+    div.setAttribute('title', 'Hello Div'); //yeh title attribute set krega div k liye
+    div.innerText = "Hello World"; //yeh div k andr text set krega
+    console.log(div); //yeh ab div k andr text ke sath print hoga
+    div.style.color = "red"; //yeh div k text ka color red krega
+    div.appendChild(document.createTextNode("Aviral Varshney"));    //Hello WorldAviral Varshney
+
+    document.body.appendChild(div); //yeh div ko body k andr append krega
+
+</script>
+</html>
+
+
