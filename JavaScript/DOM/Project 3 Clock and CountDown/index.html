@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 flex flex-col justify-center items-center h-screen">
+    <h1 class="font-bold text-4xl mb-8">Set Your Timer Now!</h1>
+    <div class="border-2 border-black rounded-lg bg-pink-200">
+    <p class="text-3xl font-bold mx-40 flex my-4">Current Time
+    <span id="clock" class="border-2 border-black border-solid rounded-lg bg-green-400 h-10 w-40 flex justify-center items-center text-2xl mx-8"></span>
+    </p>
+    <br>
+    <br>
+    <div class="flex mx-40 ">
+        <label for="timer" class="text-red-800 text-2xl font-bold">Enter value to set timer: </label>
+        <input type="text" id="timer" class="rounded-lg w-24 h-6 border-2 border-black rounded-lg mx-4 mt-2  font-bold text-black p-2" >
+    </div>
+    <br><br>
+    <button type="submit" id= "start" class="font-bold border-2 border-black rounded-lg p-2 mx-72">Start Timer!</button>
+    <div class="w-40 h-8 bg-yellow-200 flex justify-center font-bold mx-64 my-4" id="timeLeft">Time Left: </div>
+
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
