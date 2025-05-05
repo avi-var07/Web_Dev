@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p>Hii this is jquery1!</p>
+    <p>Hii this is jquery2!</p>
+    <p>Hii this is jquery3!</p>
+    <p>Hii this is jquery4!</p>
+    <p>Hii this is jquery5!</p> -->
+    <label for="">Task: </label>
+    <input type="text" id="task">
+    <button id="add">Add</button>
+    <ul id="List"></ul>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    // $(document).ready(function () {
+    //   $("p").click(function () {
+    //     //alert("Tune idhar click kiya!");
+    //     $(this).hide(); //jispe click kroge wohi hide hoga
+    //   });
+    //   $("p").dblclick(function () {
+    //     alert("Saale double click krta hai madarchod!");
+    //   });
+    // });
+
+    //to do list using jquery
+
+    $(document).ready(function(){
+        $("#add").click(function(){
+            let task = $("#task").val().trim();
+            let li = $("<li></li>").text(task);
+
+            let dlt = $("<button>Delete</button>");
+            dlt.click(function(){
+                li.remove();
+            });
+
+            li.append(dlt);
+            $("#List").append(li);
+            $("#task").val("");
+
+        });
+    })
+  </script>
+</html>
