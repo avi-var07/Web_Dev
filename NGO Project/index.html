@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaana Bank Trust - Feeding Hope, Nourishing Lives</title>
+    <meta name="description" content="Khaana Bank Trust is a non-profit organization dedicated to fighting hunger and empowering communities through food distribution, education, and sustainable development.">
+    <meta name="keywords" content="NGO, food bank, hunger relief, community service, donation, volunteer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Configure Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-navy': '#1e3a8a',
+                        'primary-red': '#dc2626',
+                        'primary-yellow': '#fbbf24',
+                        'secondary-navy': '#1e40af',
+                        'secondary-red': '#ef4444',
+                        'secondary-yellow': '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg transition-all duration-300" id="header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.jpg" alt="Khaana Bank Trust Logo" class="h-12 w-12">
+                    <div>
+                        <h1 class="text-xl font-bold text-primary-navy">Khaana Bank Trust</h1>
+                        <p class="text-xs text-gray-600">Feeding Hope, Nourishing Lives</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-primary-navy font-medium active">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">About Us</a></li>
+                    <li><a href="notable-works.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">Notable Works</a></li>
+                    <li><a href="gallery.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">Blog</a></li>
+                    <li><a href="events.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">Events</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-700 hover:text-primary-navy font-medium">Contact</a></li>
+                </ul>
+                
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="join-us.html" class="btn-primary">Join Us</a>
+                    <a href="donation.html" class="btn-secondary">Donate Now</a>
+                    <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl text-primary-navy"></i>
+                </button>
+            </nav>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobileMenu">
+                <ul class="py-4 space-y-2">
+                    <li><a href="#home" class="block py-2 text-gray-700 hover:text-primary-navy">Home</a></li>
+                    <li><a href="about.html" class="block py-2 text-gray-700 hover:text-primary-navy">About Us</a></li>
+                    <li><a href="notable-works.html" class="block py-2 text-gray-700 hover:text-primary-navy">Notable Works</a></li>
+                    <li><a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary-navy">Gallery</a></li>
+                    <li><a href="blog.html" class="block py-2 text-gray-700 hover:text-primary-navy">Blog</a></li>
+                    <li><a href="events.html" class="block py-2 text-gray-700 hover:text-primary-navy">Events</a></li>
+                    <li><a href="contact.html" class="block py-2 text-gray-700 hover:text-primary-navy">Contact</a></li>
+                    <li class="pt-4 space-y-2">
+                        <a href="join-us.html" class="btn-primary block text-center">Join Us</a>
+                        <a href="donation.html" class="btn-secondary block text-center">Donate Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-white" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Feeding Hope, <br>
+                        <span class="text-primary-yellow">Nourishing Lives</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-200">
+                        Join us in our mission to eliminate hunger and create sustainable communities. 
+                        Together, we can make a difference, one meal at a time.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="join-us.html" class="btn-accent text-center">
+                            <i class="fas fa-hands-helping mr-2"></i>
+                            Join Our Mission
+                        </a>
+                        <a href="donation.html" class="btn-secondary text-center">
+                            <i class="fas fa-heart mr-2"></i>
+                            Donate Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left">
+                    <img src="assets/images/hero-image.jpg" alt="Feeding the hungry" class="rounded-lg shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-primary-yellow text-primary-navy p-4 rounded-lg font-bold">
+                        <div class="text-2xl counter-number" data-target="15000">0</div>
+                        <div class="text-sm">Meals Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Live Counters -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="counter-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-utensils text-4xl mb-4 text-primary-yellow"></i>
+                    <div class="counter-number" data-target="15000">0</div>
+                    <div class="text-lg font-medium">Meals Served</div>
+                </div>
+                <div class="counter-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-users text-4xl mb-4 text-primary-yellow"></i>
+                    <div class="counter-number" data-target="250">0</div>
+                    <div class="text-lg font-medium">Members Joined</div>
+                </div>
+                <div class="counter-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-calendar-check text-4xl mb-4 text-primary-yellow"></i>
+                    <div class="counter-number" data-target="85">0</div>
+                    <div class="text-lg font-medium">Events Completed</div>
+                </div>
+                <div class="counter-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-tree text-4xl mb-4 text-primary-yellow"></i>
+                    <div class="counter-number" data-target="500">0</div>
+                    <div class="text-lg font-medium">Trees Planted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="assets/images/about-image.jpg" alt="About Khaana Bank Trust" class="rounded-lg shadow-lg">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-navy">About Khaana Bank Trust</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Khaana Bank Trust is a dedicated non-profit organization founded with the vision of creating a 
+                        hunger-free society. We believe that access to nutritious food is a fundamental human right, 
+                        and we work tirelessly to ensure no one goes to bed hungry.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Our comprehensive approach includes food distribution, community gardens, nutrition education, 
+                        and sustainable development programs that empower communities to become self-sufficient.
+                    </p>
+                    <a href="about.html" class="btn-primary">
+                        Learn More About Us
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-navy">Our Mission & Vision</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Driven by compassion and guided by our core values, we strive to create lasting change in communities.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Mission -->
+                <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary-navy">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To eliminate hunger and food insecurity in our communities by providing nutritious meals, 
+                        promoting sustainable agriculture, and empowering individuals through education and skills development.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-primary-navy text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary-navy">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A world where every individual has access to nutritious food, where communities are self-sufficient, 
+                        and where hunger is eliminated through collective action and sustainable solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-navy">Recent Notable Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Discover our latest initiatives and the impact we're making in communities across the region.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/work1.jpg" alt="Food Distribution Drive" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-primary-red text-sm font-medium mb-2">Food Distribution</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary-navy">Emergency Food Relief</h3>
+                        <p class="text-gray-600 mb-4">
+                            Provided 2,000 meals to families affected by recent floods in the region.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">March 2024</span>
+                            <a href="notable-works.html" class="text-primary-navy hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/work2.jpg" alt="Community Garden" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-primary-red text-sm font-medium mb-2">Sustainable Agriculture</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary-navy">Community Gardens</h3>
+                        <p class="text-gray-600 mb-4">
+                            Established 5 community gardens providing fresh produce to 200 families.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">February 2024</span>
+                            <a href="notable-works.html" class="text-primary-navy hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/work3.jpg" alt="Nutrition Education" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-primary-red text-sm font-medium mb-2">Education</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary-navy">Nutrition Workshops</h3>
+                        <p class="text-gray-600 mb-4">
+                            Conducted nutrition education workshops for 150 mothers and children.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">January 2024</span>
+                            <a href="notable-works.html" class="text-primary-navy hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="notable-works.html" class="btn-primary">
+                    View All Works
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-navy">What People Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Hear from the people whose lives have been touched by our work.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/testimonial1.jpg" alt="Priya Sharma" class="testimonial-avatar">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Working with Khaana Bank Trust has been incredibly rewarding. The dedication of the team 
+                        towards helping the underprivileged is truly inspiring."
+                    </p>
+                    <h4 class="font-bold text-primary-navy">Priya Sharma</h4>
+                    <p class="text-sm text-gray-500">Volunteer</p>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/testimonial2.jpg" alt="Rajesh Kumar" class="testimonial-avatar">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "During the tough times, Khaana Bank Trust provided not just food but hope. 
+                        Their support helped my family get back on our feet."
+                    </p>
+                    <h4 class="font-bold text-primary-navy">Rajesh Kumar</h4>
+                    <p class="text-sm text-gray-500">Beneficiary</p>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/testimonial3.jpg" alt="Dr. Meera Patel" class="testimonial-avatar">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The systematic approach and transparency of Khaana Bank Trust in their operations 
+                        is commendable. They truly make a difference."
+                    </p>
+                    <h4 class="font-bold text-primary-navy">Dr. Meera Patel</h4>
+                    <p class="text-sm text-gray-500">Social Worker</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-primary-navy text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay Connected</h2>
+                <p class="text-lg mb-8 text-gray-200">
+                    Subscribe to our newsletter to receive updates about our work, upcoming events, and ways to get involved.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900" required>
+                    <button type="submit" class="btn-accent">
+                        Subscribe
+                        <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/images/logo.png" alt="Khaana Bank Trust" class="h-10 w-10">
+                        <h3 class="text-xl font-bold">Khaana Bank Trust</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Dedicated to eliminating hunger and creating sustainable communities through 
+                        compassionate action and community empowerment.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="notable-works.html" class="text-gray-400 hover:text-white">Notable Works</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Get Involved -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="join-us.html" class="text-gray-400 hover:text-white">Join Us</a></li>
+                        <li><a href="donation.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="partnership.html" class="text-gray-400 hover:text-white">Partnerships</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Main Street, City, State 12345
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>
+                            +91 9876543210
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@khaanabanktrust.org
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Khaana Bank Trust. All rights reserved. | 
+                    <a href="privacy.html" class="hover:text-white">Privacy Policy</a> | 
+                    <a href="terms.html" class="hover:text-white">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
