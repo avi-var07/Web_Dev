@@ -9,6 +9,27 @@
 
 //Suppose: 
 
+// let a = new Promise((resolve, reject)=>{
+    
+//     setTimeout(()=>{
+//         console.log("Being Resolved!");
+//         resolve("Done");
+//         },5000)
+// });
+// let a1 = new Promise((resolve, reject)=>{
+ 
+//     setTimeout(()=>{
+//         console.log("Being Rejected!");
+//         reject(new Error ("This is an error"));
+//         },5000)
+// });
+
+
+// both a and a1 runs parallely!
+
+
+//using .then, .catch ---
+
 let a = new Promise((resolve, reject)=>{
     
     setTimeout(()=>{
@@ -24,5 +45,18 @@ let a1 = new Promise((resolve, reject)=>{
         },5000)
 });
 
+a.then((value)=>{   //ye resolved tha
+    console.log(value);
+})
 
-// both a and a1 runs parallely!
+a1.catch((err)=>{
+    console.log("Error aagyi bhai!");
+})
+
+//output: 
+/*
+Being Resolved!
+Done
+Being Rejected!
+Error aagyi bhai!
+*/
