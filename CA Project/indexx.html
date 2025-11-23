@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Operator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <h1 class="text-xl font-bold">Tour Operator</h1>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="packages.html" class="hover:underline">Packages</a></li>
+            <li><a href="booking.html" class="hover:underline">Booking</a></li>
+            <li><a href="guides.html" class="hover:underline">Guides</a></li>
+            <li><a href="feedback.html" class="hover:underline">Feedback</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container mx-auto p-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Welcome to Tour Operator</h2>
+        <p class="text-lg">Explore amazing destinations with customized tour packages.</p>
+    </main>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="fixed bottom-5 right-5 w-64 bg-white p-4 shadow-lg rounded-lg hidden">
+        <h3 class="text-lg font-bold">Tour Guide Chat</h3>
+        <div id="chat-messages" class="h-40 overflow-auto border p-2 mb-2"></div>
+        <input type="text" id="chat-input" class="w-full p-2 border rounded" placeholder="Ask something...">
+        <button onclick="sendMessage()" class="bg-blue-500 text-white px-4 py-2 mt-2 rounded">Send</button>
+    </div>
+    <button id="chatbot-toggle" class="fixed bottom-5 right-5 bg-blue-600 text-white px-4 py-2 rounded">Chat</button>
+    
+    <script>
+        document.getElementById("chatbot-toggle").addEventListener("click", function() {
+            document.getElementById("chatbot").classList.toggle("hidden");
+        });
+        
+        function sendMessage() {
+            const input = document.getElementById("chat-input");
+            const messages = document.getElementById("chat-messages");
+            if (input.value.trim() !== "") {
+                messages.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
+                setTimeout(() => {
+                    messages.innerHTML += `<p><strong>Bot:</strong> Let me help you with that!</p>`;
+                    messages.scrollTop = messages.scrollHeight;
+                }, 1000);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
