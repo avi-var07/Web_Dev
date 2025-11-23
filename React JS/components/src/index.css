@@ -1,0 +1,9 @@
+body{
+  background-color: aqua;
+}
+.card{
+  background-color: beige;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
